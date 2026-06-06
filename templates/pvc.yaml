@@ -3,6 +3,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: {{ include "btc-loki-helm.fullname" . }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "btc-loki-helm.labels" . | nindent 4 }}
 spec:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ include "btc-loki-helm.fullname" . }}
+  namespace: {{ .Values.namespace }}
   labels:
     {{- include "btc-loki-helm.labels" . | nindent 4 }}
 spec:

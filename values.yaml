@@ -1,4 +1,5 @@
 # Loki Configuration
+namespace: bt
 replicaCount: 1
 
 image:
